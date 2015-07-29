@@ -13,8 +13,8 @@ class PhotosController < ApplicationController
   def destroy
 
     @id = params["id"]
-    p = Photo.find({ :id => @id })
-    p.desroy
+    p = Photo.find(@id)
+    p.destroy
 
     render("deleted.html.erb")
   end
