@@ -16,7 +16,8 @@ class PhotosController < ApplicationController
     p = Photo.find(@id)
     p.destroy
 
-    render("deleted.html.erb")
+    redirect_to :action => "index"
+   # render("deleted.html.erb")
   end
 
   def new_form
