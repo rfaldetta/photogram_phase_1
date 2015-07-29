@@ -13,10 +13,16 @@ class PhotosController < ApplicationController
   def destroy
 
     @id = params["id"]
-    p = Photo.find(@id)
+    p = Photo.find({ :id => @id })
     p.desroy
 
     render("deleted.html.erb")
+  end
+
+  def new_form
+
+
+    render("new_form.html.erb")
   end
 
 end
