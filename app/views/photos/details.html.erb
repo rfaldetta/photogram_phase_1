@@ -1,2 +1,2 @@
-<img src="<%= @list_of_photos.where({ :id => @id }).source %>" width="80">
-<p><%= @list_of_photos.where({ :id => @id }).caption %></p>
+<img src="<%= @list_of_photos.find(@id).source %>" width="100%">
+<p><%= @list_of_photos.find(@id).caption %></p>
